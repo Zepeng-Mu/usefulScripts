@@ -1,3 +1,7 @@
+#' @param pvector a vector for observed P-values
+#' @param col a string for point color in QQ-plot
+#' @param add a Boolean for whether to overlay on an existing plot
+#' @param ylim a numeric vector specifying the range of y axis
 qqplot <- function(pvector, col = "black", add = F, ylim = NULL){
   expectedP <- -log10(ppoints(length(pvector)))
   observedP <- -log10(sort(pvector, decreasing = F))
